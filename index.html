@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <title>Device - интернет-магазин гаджетов</title>
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
 
-  </body>
+<body class="main-page">
+  <div class="site-wrapper">
+    <div class="container">
+      <header class="main-header">
+        <div class="logo">
+          <a href="#">Device</a>
+        </div>
+        <nav class="main-navigation">
+          <div class="personal-navigation">
+            <div class="personal-navigation-search">
+              <h2 class="visually-hidden">Поиск по сайту</h2>
+              <form class="search-form" method="get" action="http://echo.htmlacademy.ru">
+                <p class="input-wrapper">
+                  <label for="search-input" class="visually-hidden">Поисковой запрос</label>
+                  <input class="text-input" type="search" placeholder="Поиск по сайту" name="search-input"
+                    id="search-input">
+                </p>
+              </form>
+            </div>
+            <a class="personal-navigation-login" href="login.html">Войти</a>
+            <a class="personal-navigation-compare" href="#">Сравнить</a>
+            <a class="personal-navigation-basket" href="basket.html">Корзина</a>
+          </div>
+          <ul class="site-navigation">
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link site-navigation-catalog">Каталог товаров</a>
+              <ul class="site-navigation-submenu">
+                <li class="site-navigation-submenu-item">
+                  <a class="site-navigation-submenu-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="site-navigation-submenu-item">
+                  <a class="site-navigation-submenu-link" href="#">Моноподы для селфи</a>
+                </li>
+                <li class="site-navigation-submenu-item">
+                  <a class="site-navigation-submenu-link" href="#">Экшн-камеры</a>
+                </li>
+                <li class="site-navigation-submenu-item">
+                  <a class="site-navigation-submenu-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="site-navigation-submenu-item">
+                  <a class="site-navigation-submenu-link" href="#">Умные часы</a>
+                </li>
+                <li class="site-navigation-submenu-item">
+                  <a class="site-navigation-submenu-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link">Доставка</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link">Гарантия</a>
+            </li>
+            <li class="site-navigation-item">
+              <a href="#" class="site-navigation-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Делай селфи, как Бен Стиллер!  -->
+      <section class="product-categories">
+        <h2 class="visually-hidden">Категории твоаров</h2>
+        <ul class="categories-list">
+          <li class="categories-item">
+            <a class="categories-link" href="#">
+              <img src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55">
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
+
 </html>
