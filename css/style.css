@@ -1,0 +1,92 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    color: #000000;
+    /*font-family: "Roboto", Arial, sans-serif;*/
+    font-size: 15px;
+    line-height: 30px;
+
+    min-width: 1200px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.site-wrapper {
+    padding-top: 40px;
+}
+
+.container {
+    position: relative;
+
+    width: 1160px;
+
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.button {
+    display: inline-block;
+}
+
+.input-wrapper {
+    margin: 0;
+}
+
+/* Окончание общих стилей */
+
+.main-header {
+    position: relative;
+
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+    background-color: rgba(240, 197, 46, 0.5);
+}
+
+.logo {
+    position: absolute;
+
+    top: -19px;
+}
+
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-navigation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-navigation-submenu {
+    display: none;
+}
+
+.slide:not(:first-child) {
+    display: none;
+}
