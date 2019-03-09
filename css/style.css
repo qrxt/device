@@ -12,7 +12,7 @@ html {
 
 body {
     color: #000000;
-    /*font-family: "Roboto", Arial, sans-serif;*/
+    font-family: sans-serif;
     font-size: 15px;
     line-height: 30px;
 
@@ -40,7 +40,6 @@ body {
     width: 1160px;
 
     margin: 0 auto;
-    padding: 0 60px;
 }
 
 .button {
@@ -57,7 +56,9 @@ body {
     position: relative;
 
     padding-top: 50px;
+    padding-right: 60px;
     padding-bottom: 30px;
+    padding-left: 60px;
 
     background-color: rgba(240, 197, 46, 0.5);
 }
@@ -89,4 +90,22 @@ body {
 
 .slide:not(:first-child) {
     display: none;
+}
+
+.categories-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services-slider {
+    background-color: #e5e5e5;
+}
+
+.partners-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-footer {
+    background-color: #464646;
 }

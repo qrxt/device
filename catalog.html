@@ -70,17 +70,23 @@
     </header>
 
     <main>
-      <h1 class="catalog-page-title">Моноподы для селфи</h1>
-      <ul class="breadcrumbs">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Каталог товаров</a></li>
-        <li class="breadcrumbs-current">Моноподы для селфи</li>
-      </ul>
+      <div class="container">
+        <h1 class="catalog-page-title">Моноподы для селфи</h1>
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Каталог товаров</a></li>
+          <li class="breadcrumbs-current">Моноподы для селфи</li>
+        </ul>
+      </div>
 
-      <div class="blocks-wrapper">
+      <div class="product-captions container">
+        <h2 class="products-filter-caption">Фильтр:</h2>
+        <h2 class="catalog-products-sort-caption">Сортировка:</h2>
+      </div>
+
+      <div class="blocks-wrapper products-wrapper">
         <div class="container">
           <aside class="products-filter">
-            <h2 class="products-filter-caption">Фильтр:</h2>
             <form class="filter-form" action="http://echo.htmlacademy.ru">
               <fieldset class="filter-form-item">
                 <legend>Стоимость</legend>
@@ -133,9 +139,9 @@
               <button class="filter-form-button button">Показать</button>
             </form>
           </aside>
+
           <div class="blocks-wrapper">
             <div class="catalog-products-sort">
-              <h3 class="catalog-products-sort-caption">Сортировка:</h3>
               <button class="sort-item sort-item-active">По цене</button>
               <button class="sort-item">По типу</button>
               <button class="sort-item">По популярности</button>
@@ -236,7 +242,7 @@
             </li>
           </ul>
           <a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Разработчик сайта">
-            <img class="footer-logo" src="img/logo-htmlacademy.svg" width="27" height="35" alt="Логотип HTML Academy">
+            <img class="footer-logo" src="img/logo-html.svg" width="27" height="35" alt="Логотип HTML Academy">
           </a>
         </div>
       </div>
