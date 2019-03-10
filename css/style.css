@@ -32,9 +32,8 @@ body {
 
 .container {
     position: relative;
-
+    padding: 0 20px;
     width: 1160px;
-
     margin: 0 auto;
 }
 
@@ -60,14 +59,12 @@ body {
 }
 
 .logo {
-    position: absolute;
-
+    position: relative;
     top: -19px;
 }
 
 .main-navigation {
     display: flex;
-    flex-direction: column;
 }
 
 .personal-navigation {
