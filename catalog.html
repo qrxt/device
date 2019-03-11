@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
   <title>Device - интернет-магазин гаджетов</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -80,10 +81,17 @@
       <div class="container">
         <h2 class="catalog-filter-caption">Фильтр:</h2>
         <h2 class="catalog-sort-caption">Сортировка:</h2>
+        <div class="catalog-sort">
+          <a class="sort-item sort-item-active">По цене</a>
+          <a class="sort-item">По типу</a>
+          <a class="sort-item">По популярности</a>
+          <a class="sort-item sort-order sort-ascending" aria-label="Сортировка по возрастанию"></a>
+          <a class="sort-item sort-order sort-descending" aria-label="Сортировка по убыванию"></a>
+        </div>
       </div>
     </div>
 
-    <div class="products-wrapper">
+    <div class="catalog-wrapper">
       <div class="container">
         <section class="products-filter">
           <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -151,14 +159,6 @@
           </form>
         </section>
 
-        <div class="catalog-sort">
-          <a class="sort-item sort-item-active">По цене</a>
-          <a class="sort-item">По типу</a>
-          <a class="sort-item">По популярности</a>
-          <a class="sort-item sort-order sort-ascending" aria-label="Сортировка по возрастанию"></a>
-          <a class="sort-item sort-order sort-descending" aria-label="Сортировка по убыванию"></a>
-        </div>
-
         <section class="catalog">
           <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
           <ul class="catalog-list">
@@ -211,14 +211,14 @@
               <b class="catalog-item-price">4900 руб.</b>
             </li>
           </ul>
+          <div class="pagination">
+            <a class="pagination-direction pagination-backwards" href="#">Назад</a>
+            <a class="pagination-item pagination-item-active">1</a>
+            <a class="pagination-item" href="#">2</a>
+            <a class="pagination-item" href="#">3</a>
+            <a class="pagination-direction pagination-forward" href="#">Вперед</a>
+          </div>
         </section>
-        <div class="pagination">
-          <a class="pagination-direction pagination-backwards" href="#">Назад</a>
-          <a class="pagination-item pagination-item-active">1</a>
-          <a class="pagination-item" href="#">2</a>
-          <a class="pagination-item" href="#">3</a>
-          <a class="pagination-direction pagination-forward" href="#">Вперед</a>
-        </div>
       </div>
     </div>
   </main>

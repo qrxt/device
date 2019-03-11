@@ -14,12 +14,16 @@ body {
     min-width: 1200px;
 
     color: #000000;
-    font-family: sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     font-size: 15px;
     line-height: 30px;
+    font-weight: 300;
 
     margin: 0;
-    padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .visually-hidden {
@@ -45,6 +49,11 @@ body {
     margin: 0;
 }
 
+.blocks-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* Окончание общих стилей */
 
 .main-header {
@@ -60,7 +69,7 @@ body {
 
 .logo {
     position: relative;
-    top: -20px;
+    top: -19px;
 }
 
 .main-navigation {
@@ -81,7 +90,23 @@ body {
     display: none;
 }
 
-.slide:not(:first-child) {
+.promos-item {
+    display: flex;
+}
+
+.promo-image {
+    margin-right: 125px;
+}
+
+.promo-details {
+    display: flex;
+}
+
+.slide-toggle-button {
+    display: none;
+}
+
+.slider-item:not(:first-child) {
     display: none;
 }
 
@@ -90,8 +115,17 @@ body {
     flex-wrap: wrap;
 }
 
-.services-slider {
+.services {
     background-color: #e5e5e5;
+}
+
+.services-slider {
+    display: flex;
+}
+
+.services-controls {
+    display: flex;
+    flex-direction: column;
 }
 
 .partners-list {
@@ -99,6 +133,44 @@ body {
     flex-wrap: wrap;
 }
 
+.about-us {
+    max-width: 465px;
+}
+
+.contacts {
+    max-width: 560px;
+}
+
+.breadcrumbs {
+    display: flex;
+}
+
+.blocks-captions > .container {
+    display: flex;
+}
+
+.catalog-wrapper > .container {
+    display: flex;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .main-footer {
     background-color: #464646;
+}
+
+.footer-navigation {
+    display: flex;
+}
+
+.social-list {
+    display: flex;
+}
+
+.write-us,
+.our-location {
+    display: none;
 }
