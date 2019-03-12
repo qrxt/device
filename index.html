@@ -20,7 +20,8 @@
         <form class="main-search-form" method="get" action="http://echo.htmlacademy.ru">
           <p class="input-wrapper">
             <label for="search-input" class="visually-hidden">Поисковой запрос</label>
-            <input class="text-input" type="search" placeholder="Поиск по сайту" name="search-input" id="search-input">
+            <input class="search-input" type="search" placeholder="Поиск по сайту" name="search-input"
+              id="search-input">
           </p>
         </form>
       </div>
@@ -83,6 +84,8 @@
               <h3 class="promo-info-title title">Делай селфи, как Бен Стиллер!</h3>
               <p class="promo-info-description">
                 Самая длинная палка для селфи доступна в нашем магазине.
+              </p>
+              <p class="promo-info-description">
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
               <a class="promo-info-button button" href="#">Подробнее</a>
@@ -148,37 +151,49 @@
         <ul class="categories-list">
           <li class="categories-item">
             <a class="categories-link" href="#">
-              <img src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55">
+              <div class="categories-card caterogies-card-vr">
+                <img src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55">
+              </div>
               <h3 class="category-name">Виртуальная реальность</h3>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-link" href="#">
-              <img src="img/popular-2.svg" alt="Виртуальная реальность" width="97" height="55">
+              <div class="categories-card caterogies-card-selfie">
+                <img src="img/popular-2.svg" alt="Моноподы для селфи" width="97" height="55">
+              </div>
               <h3 class="category-name">Моноподы для селфи</h3>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-link" href="#">
-              <img src="img/popular-3.svg" alt="Виртуальная реальность" width="97" height="55">
+              <div class="categories-card caterogies-card-cameras">
+                <img src="img/popular-3.svg" alt="Экшн-камеры" width="97" height="55">
+              </div>
               <h3 class="category-name">Экшн-камеры</h3>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-link" href="#">
-              <img src="img/popular-4.svg" alt="Виртуальная реальность" width="97" height="55">
+              <div class="categories-card caterogies-card-fitness">
+                <img src="img/popular-4.svg" alt="Фитнес-браслеты" width="97" height="55">
+              </div>
               <h3 class="category-name">Фитнес-браслеты</h3>
             </a>
           </li>
-          <li class="categories-item">
+          <li class="categories-item caterogies-card-smartwatch">
             <a class="categories-link" href="#">
-              <img src="img/popular-5.svg" alt="Виртуальная реальность" width="97" height="55">
+              <div class="categories-card">
+                <img src="img/popular-5.svg" alt="Умные часы" width="97" height="55">
+              </div>
               <h3 class="category-name">Умные часы</h3>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-link" href="#">
-              <img src="img/popular-6.svg" alt="Виртуальная реальность" width="97" height="55">
+              <div class="categories-card">
+                <img src="img/popular-6.svg" alt="Квадрокоптеры" width="97" height="55">
+              </div>
               <h3 class="category-name">Квадрокоптеры</h3>
             </a>
           </li>
@@ -191,7 +206,7 @@
       <div class="container">
         <div class="services-slider">
           <div class="services-controls">
-            <button class="services-controls-button button">Достака</button>
+            <button class="services-controls-button button">Доставка</button>
             <button class="services-controls-button button">Гарантия</button>
             <button class="services-controls-button button">Кредит</button>
           </div>

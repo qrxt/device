@@ -1,15 +1,15 @@
 @font-face {
-    font-family: "Gilroy Extra Bold";
-    src: url("fonts/gilroyextrabold.woff2") format("woff2"),
-         url("fonts/gilroyextrabold.woff") format("woff");
+    font-family: "Gilroy";
+    src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+         url("../fonts/gilroyextrabold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Gilroy Light";
-    src: url("fonts/gilroylight.woff2") format("woff2"),
-         url("fonts/gilroylight.woff") format("woff");
+    font-family: "Gilroy";
+    src: url("../fonts/gilroylight.woff2") format("woff2"),
+         url("../fonts/gilroylight.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
@@ -52,13 +52,24 @@ a {
 
 .container {
     position: relative;
-    padding: 0 20px;
     width: 1160px;
     margin: 0 auto;
 }
 
 .button {
     display: inline-block;
+
+    font-family: "Gilroy";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    color: #000000;
+
+    background-color: transparent;
+
+    border: none;
 }
 
 .input-wrapper {
@@ -97,13 +108,88 @@ a {
     flex-wrap: wrap;
 }
 
+.personal-navigation a {
+    padding-left: 25px;
+
+    font-size: 15px;
+    line-height: 30px;
+    color: #000000;
+    text-align: middle;
+}
+
+.personal-navigation a:hover,
+.personal-navigation a:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.personal-navigation a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.search-input {
+    position: relative;
+
+    width: 355px;
+    height: 49px;
+
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #000000;
+    vertical-align: middle;
+
+    background-color: transparent;
+    
+    border: none;
+}
+
+.search-input::placeholder {
+    font-size: 15px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.search-input:hover::placeholder,
+.search-input:focus::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
 .site-navigation {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation-item {
+    
+    list-style: none;
+}
+
+.site-navigation-link {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  text-align: left;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 .site-navigation-submenu {
     display: none;
+}
+
+.products-slider {
+    margin-bottom: 100px;
+}
+
+.promos-list {
+    margin: 0;
+    padding: 0;
 }
 
 .promos-item {
@@ -114,8 +200,61 @@ a {
     margin-right: 125px;
 }
 
+.promo-info-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-family: "Gilroy";
+    font-size: 47px;
+    line-height: 56px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+
+.promo-info-description {
+    margin: 0;
+}
+
+.promo-info-description:last-of-type {
+    margin-bottom: 60px;
+}
+
+.promo-info-button {
+    margin-bottom: 70px;
+}
+
 .promo-details {
     display: flex;
+}
+
+.promo-details-item {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0
+}
+
+.promo-details-item:not(:last-child) {
+    margin-right: 80px;
+}
+
+.promo-details-name {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    font-weight: 300;
+    color: #464646;
+}
+
+.promo-details-value {
+    margin: 0;
+
+    font-family: "Gilroy";
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.36px;
+    font-weight: 300;
+    color: #000000;
 }
 
 .slide-toggle-button {
@@ -129,6 +268,43 @@ a {
 .categories-list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    margin-bottom: 100px; /* */
+}
+
+.categories-item {
+    position: relative;
+
+    width: 160px;
+}
+
+.categories-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.categories-card {
+    display: flex;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 40px;
+
+    background-color: rgba(240, 197, 46, 0.5);
+}
+
+.categories-card img {
+    margin: auto;
+}
+
+.categories-card-selfie {
+    width: 86px;
+    height: 117px;
+}
+
+.category-name {
+    margin: 0;
 }
 
 .services {
@@ -139,6 +315,10 @@ a {
     display: flex;
 }
 
+.services-list {
+    list-style: none;
+}
+
 .services-controls {
     display: flex;
     flex-direction: column;
@@ -147,6 +327,14 @@ a {
 .partners-list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.partners-item:not(:last-child) {
+    margin-right: 20px;
 }
 
 .about-us {
