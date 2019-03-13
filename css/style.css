@@ -59,7 +59,7 @@ a {
 .button {
     display: inline-block;
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 800;
@@ -79,6 +79,17 @@ a {
 .blocks-wrapper {
     display: flex;
     flex-wrap: wrap;
+}
+
+.title {
+    margin: 0;
+
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 47px;
+    line-height: 48px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #000000;
 }
 
 /* Окончание общих стилей */
@@ -180,11 +191,27 @@ a {
 }
 
 .site-navigation-submenu {
-    display: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+
+    list-style: none;
+
+    display: none; /**/
+}
+
+.site-navigation-submenu-item a {
+    font-size: 15px;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    font-weight: 300;
+    color: #000000;
 }
 
 .products-slider {
-    margin-bottom: 100px;
+    margin-bottom: 105px;
 }
 
 .promos-list {
@@ -201,15 +228,9 @@ a {
 }
 
 .promo-info-title {
-    margin-top: 0;
     margin-bottom: 30px;
 
-    font-family: "Gilroy";
-    font-size: 47px;
     line-height: 56px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    color: #000000;
 }
 
 .promo-info-description {
@@ -249,7 +270,7 @@ a {
 .promo-details-value {
     margin: 0;
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", Arial, sans-serif;
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 0.36px;
@@ -286,6 +307,7 @@ a {
 }
 
 .categories-card {
+    position: relative;
     display: flex;
     width: 160px;
     height: 160px;
@@ -298,13 +320,48 @@ a {
     margin: auto;
 }
 
-.categories-card-selfie {
+.categories-card-selfie img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 86px;
     height: 117px;
 }
 
+.categories-card-cameras img {
+    position: absolute;
+    left: 49px;
+    top: 0;
+    bottom: 0;
+    width: 71px;
+    height: 87px;
+}
+
+.categories-card-fitness img {
+    width: 107px;
+    height: 65px;
+}
+
+.categories-card-smartwatch img {
+    width: 56px;
+    height: 98px;
+}
+
+.categories-card-quadrocopters img {
+    width: 132px;
+    height: 69px;
+}
+
 .category-name {
     margin: 0;
+
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: #000000;
 }
 
 .services {
@@ -334,7 +391,12 @@ a {
 }
 
 .partners-item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 40px;
+}
+
+.partners-link img {
+    filter: saturate(0);
+    opacity: 0.2;
 }
 
 .about-us {
