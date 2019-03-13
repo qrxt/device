@@ -311,7 +311,7 @@ a {
     display: flex;
     width: 160px;
     height: 160px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     background-color: rgba(240, 197, 46, 0.5);
 }
@@ -322,9 +322,9 @@ a {
 
 .categories-card-selfie img {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 2px;
+    left: 38px;
+    right: 36px;
     width: 86px;
     height: 117px;
 }
@@ -365,6 +365,8 @@ a {
 }
 
 .services {
+    min-height: 288px;
+    margin-bottom: 95px;
     background-color: #e5e5e5;
 }
 
@@ -376,9 +378,27 @@ a {
     list-style: none;
 }
 
+.services-item {
+    position: relative;
+    top: -40px;
+}
+
 .services-controls {
     display: flex;
     flex-direction: column;
+}
+
+.services-item-title {
+    margin-bottom: 40px;
+}
+
+.services-item-description {
+    max-width: 430px;
+    margin: 0;
+}
+
+.partners {
+    margin-bottom: 90px;
 }
 
 .partners-list {
@@ -400,40 +420,248 @@ a {
 }
 
 .about-us {
-    max-width: 465px;
+    max-width: 475px;
+    margin-right: 120px;
+}
+
+.about-us > p {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.about-us > p:last-of-type {
+    margin-bottom: 90px;
+}
+
+.about-us-title {
+    margin-bottom: 60px;
+}
+
+.about-partners {
+    margin: 0;
+    padding: 0;
+}
+
+.about-partners-link {
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 800;
+    color: #000000;
 }
 
 .contacts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     max-width: 560px;
+}
+
+.contacts-title {
+    margin-bottom: 60px;
+}
+
+.contacts > p {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.contacts > p:last-of-type {
+    margin-bottom: 45px;
+}
+
+.contacts-map {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.contacts-button {
+    margin-top: auto;
+}
+
+.about-wrapper {
+    margin-bottom: 90px;
+}
+
+/* Стили каталога */
+
+.catalog-page-title {
+    margin-top: 45px;
+    margin-left: 60px;
+    margin-bottom: 29px;
 }
 
 .breadcrumbs {
     display: flex;
+    margin: 0 60px 50px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.catalog-filter-caption,
+.catalog-sort-caption {
+    margin: 0;
+
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 3.2px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.breadcrumbs li a,
+.breadcrumbs li {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs li a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.blocks-captions {
+    background-color: #ebebeb;
 }
 
 .blocks-captions > .container {
     display: flex;
+    align-items: center;
+    height: 71px;
 }
 
 .catalog-wrapper > .container {
     display: flex;
 }
 
+.catalog {
+    padding-top: 70px;
+    padding-left: 73px;
+}
+
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
 
+.catalog-item {
+    width: 360px;
+}
+
+.catalog-item:nth-child(2n+1) {
+    margin-right: auto;
+}
+
+.catalog-item-link {
+    display: inline-block;
+}
+
+.catalog-item-price {
+    display: inline-block;
+    min-width: 100px;
+    text-align: right;
+}
+
+.catalog-item-header {
+    margin: 0;
+
+    font-family: "Gilroy";
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+    font-weight: 800;
+    color: #000;
+}
+
+.to-basket-button,
+.to-compare-button {
+    display: none;
+}
+
+/* Окончание стилей каталога */
+
 .main-footer {
+    padding: 65px 0;
+
     background-color: #464646;
+}
+
+.footer-address {
+    margin: 0 165px 0 0;
 }
 
 .footer-navigation {
     display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.footer-navigation-item:not(:last-child) {
+    margin-right: 38px;
+}
+
+.footer-navigation-link {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 3.6px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.footer-personal-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+.footer-personal-navigation a {
+    display: block;
+
+    font-size: 15px;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-personal-navigation a:not(:last-child) {
+    margin-right: 45px;
+}
+
+.footer-address {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.footer-contacts {
+    display: block;
+    margin-left: auto;
+
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #ffffff;
 }
 
 .social-list {
     display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
 
 .write-us,
