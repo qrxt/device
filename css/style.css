@@ -58,6 +58,7 @@ a {
 
 .button {
     display: inline-block;
+    padding: 0;
 
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
@@ -110,12 +111,9 @@ a {
     top: -19px;
 }
 
-.main-navigation {
-    display: flex;
-}
-
 .personal-navigation {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -125,7 +123,6 @@ a {
     font-size: 15px;
     line-height: 30px;
     color: #000000;
-    text-align: middle;
 }
 
 .personal-navigation a:hover,
@@ -137,11 +134,17 @@ a {
     color: rgba(0, 0, 0, 0.3);
 }
 
+.main-search-form {
+    display: flex;
+    width: 355px;
+}
+
 .search-input {
     position: relative;
 
-    width: 355px;
+    width: 100%;
     height: 49px;
+    padding-left: 36px;
 
     font-size: 15px;
     line-height: 30px;
@@ -149,7 +152,10 @@ a {
     color: #000000;
     vertical-align: middle;
 
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
     background-color: transparent;
+    background-position-y: 50%;
     
     border: none;
 }
@@ -217,6 +223,7 @@ a {
 .promos-list {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .promos-item {
@@ -247,6 +254,7 @@ a {
 
 .promo-details {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .promo-details-item {
@@ -297,8 +305,6 @@ a {
 }
 
 .categories-item {
-    position: relative;
-
     width: 160px;
 }
 
@@ -375,6 +381,8 @@ a {
 }
 
 .services-list {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -421,15 +429,14 @@ a {
 
 .about-us {
     max-width: 475px;
-    margin-right: 120px;
 }
 
-.about-us > p {
+.about-us p {
     margin-top: 0;
     margin-bottom: 50px;
 }
 
-.about-us > p:last-of-type {
+.about-us p:last-of-type {
     margin-bottom: 90px;
 }
 
@@ -440,10 +447,11 @@ a {
 .about-partners {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .about-partners-link {
-    font-family: "Gilroy";
+    font-family: "Gilroy", Arial, sans-serif;
     font-size: 16px;
     line-height: 40px;
     font-weight: 800;
@@ -451,9 +459,6 @@ a {
 }
 
 .contacts {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     max-width: 560px;
 }
 
@@ -480,6 +485,8 @@ a {
 }
 
 .about-wrapper {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 90px;
 }
 
@@ -525,7 +532,7 @@ a {
 .catalog-sort-caption {
     margin: 0;
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 800;
@@ -553,7 +560,7 @@ a {
 }
 
 .filter-form-title {
-    font-family: "Gilroy";
+    font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.18px;
@@ -562,7 +569,7 @@ a {
 }
 
 .price-controls-item {
-    font-family: "Gilroy";
+    font-family: "Gilroy", Arial, sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 300;
@@ -592,26 +599,20 @@ a {
 
 .catalog-item {
     width: 360px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .catalog-item:nth-child(2n+1) {
     margin-right: auto;
 }
 
-.catalog-item-link {
-    display: inline-block;
-}
-
-.catalog-item-price {
-    display: inline-block;
-    min-width: 100px;
-    text-align: right;
-}
-
 .catalog-item-header {
     margin: 0;
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.18px;
@@ -619,8 +620,7 @@ a {
     color: #000;
 }
 
-.to-basket-button,
-.to-compare-button {
+.catalog-item-details {
     display: none;
 }
 
@@ -635,7 +635,7 @@ a {
 }
 
 .pagination-item {
-    font-family: "Gilroy";
+    font-family: "Gilroy", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 3.2px;
