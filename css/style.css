@@ -68,7 +68,7 @@ a {
     color: #000000;
 
     background-color: transparent;
-
+    cursor: pointer;
     border: none;
 }
 
@@ -499,19 +499,6 @@ a {
     list-style: none;
 }
 
-.catalog-filter-caption,
-.catalog-sort-caption {
-    margin: 0;
-
-    font-family: "Gilroy";
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 800;
-    letter-spacing: 3.2px;
-    color: #000000;
-    text-transform: uppercase;
-}
-
 .breadcrumbs li a,
 .breadcrumbs li {
     font-size: 14px;
@@ -534,8 +521,59 @@ a {
     height: 71px;
 }
 
+.catalog-filter-caption,
+.catalog-sort-caption {
+    margin: 0;
+
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    letter-spacing: 3.2px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.sort-item {
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.sort-item-active {
+    color: #000000;
+}
+
 .catalog-wrapper > .container {
     display: flex;
+}
+
+.filter-form-item {
+    border: none;
+}
+
+.filter-form-title {
+    font-family: "Gilroy";
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.price-controls-item {
+    font-family: "Gilroy";
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.filter-form-checkbox {
+    font-size: 14px;
+    line-height: 40px;
+    letter-spacing: 0.15px;
+    color: #000000;
 }
 
 .catalog {
@@ -546,7 +584,7 @@ a {
 .catalog-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 0 10px;
     padding: 0;
 
     list-style: none;
@@ -584,6 +622,31 @@ a {
 .to-basket-button,
 .to-compare-button {
     display: none;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 70px;
+    margin-bottom: 75px;
+
+    background-color: #ebebeb;
+}
+
+.pagination-item {
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 3.2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-direction,
+.pagination-item-active {
+    color: #000000;
 }
 
 /* Окончание стилей каталога */
