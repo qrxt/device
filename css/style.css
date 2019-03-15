@@ -686,6 +686,8 @@ a {
     display: block;
     width: 80px;
     height: 7px;
+    margin-right: 429px;
+    
     background-color: #ffc600;
 }
 
@@ -760,6 +762,10 @@ a {
     list-style: none;
 }
 
+.social-item:not(:nth-child(3n)) {
+    margin-right: 23px;
+}
+
 .social-link {
     display: block;
     width: 32px;
@@ -780,6 +786,10 @@ a {
 
 .social-link-twitter {
     background-image: url("../img/twitter.svg");
+}
+
+.academy-logo {
+    margin-left: auto;
 }
 
 .write-us,
