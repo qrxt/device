@@ -20,10 +20,12 @@
         <label for="search-input" class="visually-hidden">Поисковой запрос</label>
         <input class="search-input" type="search" placeholder="Поиск по сайту" name="search-input" id="search-input">
       </form>
-      <a class="personal-navigation-profile" href="profile.html">Валентин Петухов</a>
-      <a class="personal-navigation-login" href="sign-out.html">Выйти</a>
-      <a class="personal-navigation-compare" href="#">Сравнить</a>
-      <a class="personal-navigation-basket" href="basket.html">Корзина</a>
+      <div class="personal-links">
+        <a class="user-login" href="profile.html">Валентин Петухов</a>
+        <a class="user-exit" href="sign-out.html">Выйти</a>
+        <a class="user-compare" href="#">Сравнить</a>
+        <a class="user-basket" href="basket.html">Корзина</a>
+      </div>
     </div>
     <nav class="main-navigation">
       <ul class="site-navigation">
@@ -148,7 +150,8 @@
                 <label class="filter-form-radio" for="bluetooth-true">Есть</label>
               </p>
               <p class="input-wrapper">
-                <input class="filter-form-input" type="radio" value="true" name="product-bluetooth" id="bluetooth-false">
+                <input class="filter-form-input" type="radio" value="true" name="product-bluetooth"
+                  id="bluetooth-false">
                 <label class="filter-form-radio" for="bluetooth-false">Есть</label>
               </p>
             </fieldset>
@@ -160,7 +163,8 @@
           <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <img class="catalog-item-image" src="img/item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
+              <img class="catalog-item-image" src="img/item-1.jpg" alt="Любительская селфи-палка" width="360"
+                height="380">
               <div class="catalog-item-details">
                 <a class="to-basket-button button" href="#">В корзину</a>
                 <a class="to-compare-button" href="#">Добавить к сравнению</a>
@@ -183,7 +187,8 @@
               <b class="catalog-item-price">1500 руб.</b>
             </li>
             <li class="catalog-item">
-              <img class="catalog-item-image" src="img/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
+              <img class="catalog-item-image" src="img/item-3.jpg" alt="Непотопляемая селфи-палка" width="360"
+                height="380">
               <div class="catalog-item-details">
                 <a class="to-basket-button button" href="#">В корзину</a>
                 <a class="to-compare-button" href="#">Добавить к сравнению</a>
@@ -224,7 +229,7 @@
         <a class="footer-logo" href="index.html">
           <img class="footer-logo-image" src="img/logo-device-gold.svg" alt="Логотип Device" width="163" height="35">
         </a>
-        <div class="footer-personal-navigation">
+        <div class="footer-personal-navigation personal-links">
           <a class="personal-navigation-profile" href="profile.html">Валентин Петухов</a>
           <a class="personal-navigation-login" href="sign-out.html">Выйти</a>
           <a class="personal-navigation-compare" href="#">Сравнить</a>

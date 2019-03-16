@@ -99,7 +99,7 @@ a {
 .main-header {
     position: relative;
 
-    padding-bottom: 30px;
+    padding-bottom: 48px;
     margin-top: 40px;
 
     background-color: rgba(240, 197, 46, 0.5);
@@ -113,18 +113,19 @@ a {
 
 .logo {
     position: relative;
-    top: -20px;
+    top: -18px;
 }
 
 .personal-navigation {
+    position: relative;
+    top: -10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 15px;
 }
 
 .personal-navigation a {
-    padding-left: 25px;
-
     font-size: 15px;
     line-height: 30px;
     color: #000000;
@@ -139,6 +140,57 @@ a {
     color: rgba(0, 0, 0, 0.3);
 }
 
+.personal-links {
+    display: flex;
+    align-items: center;
+}
+
+.personal-links a {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+}
+
+.personal-links a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+}
+
+.main-header .user-login::before {
+    background-image: url("../img/user.svg");
+    width: 13px;
+    height: 12px;
+    top: 8px;
+    left: 0;
+}
+
+.main-header .user-compare::before {
+    background-image: url("../img/compare.svg");
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 4px;
+}
+
+.main-header .user-basket::before {
+    background-image: url("../img/cart.svg");
+    width: 12px;
+    height: 12px;
+    top: 8px;
+    left: 2px;
+}
+
+
+.main-header .user-login {
+    margin-right: 214px;
+}
+
+.main-header .user-compare {
+    margin-right: 40px;
+}
+
 .main-search-form {
     display: flex;
     width: 355px;
@@ -148,7 +200,8 @@ a {
     position: relative;
 
     width: 100%;
-    padding-left: 36px;
+    height: 49px;
+    padding-left: 38px;
 
     font-size: 15px;
     line-height: 30px;
@@ -159,6 +212,7 @@ a {
     background-image: url("../img/search.svg");
     background-repeat: no-repeat;
     background-color: transparent;
+    background-position-x: 3px;
     background-position-y: 50%;
     
     border: none;
@@ -183,21 +237,50 @@ a {
 }
 
 .site-navigation-item {
-    
     list-style: none;
 }
 
+.site-navigation-item:first-child {
+    margin-right: 292px;
+}
+
+.site-navigation-item:nth-child(2n):not(:last-child) {
+    margin-right: 34px;
+}
+
+.site-navigation-item:nth-child(3n) {
+    margin-right: auto;
+}
+
 .site-navigation-link {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.33;
-  letter-spacing: 3.6px;
-  text-align: left;
-  color: #000000;
-  text-transform: uppercase;
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 3.6px;
+    text-align: left;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.site-navigation-catalog {
+    padding-right: 28px;
+    position: relative;
+}
+
+.site-navigation-catalog::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 0;
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+
+    opacity: 0.3;
 }
 
 .site-navigation-submenu {
@@ -317,7 +400,6 @@ a {
 }
 
 .categories-card {
-    position: relative;
     display: flex;
     width: 160px;
     height: 160px;
@@ -331,10 +413,12 @@ a {
 }
 
 .categories-card-selfie img {
-    position: absolute;
-    bottom: 2px;
-    left: 38px;
-    right: 36px;
+    position: relative;
+    bottom: -19px;
+}
+
+.categories-card-cameras {
+    position: relative;
 }
 
 .categories-card-cameras img {
@@ -530,8 +614,14 @@ a {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.breadcrumbs li a:not(:last-child) {
+.breadcrumbs li:not(:last-child) {
     margin-right: 10px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: ">";
+    margin-left: 10px;  
+    color: #000000;
 }
 
 .blocks-captions {
@@ -542,6 +632,10 @@ a {
     display: flex;
     align-items: center;
     height: 71px;
+}
+
+.catalog-sort {
+    display: flex;
 }
 
 .catalog-filter-caption,
@@ -684,6 +778,8 @@ a {
 .footer-social::before {
     content: "";
     display: block;
+    position: relative;
+    bottom: -15px;
     width: 80px;
     height: 7px;
     margin-right: 429px;
@@ -724,17 +820,35 @@ a {
 }
 
 .footer-personal-navigation a {
-    display: block;
-
     font-size: 15px;
     line-height: 36px;
     letter-spacing: 0.15px;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.7);
+
+    background-repeat: no-repeat;
+}
+
+.footer-personal-navigation .user-login::before {
+    background-image: url("../img/user-gold.svg");
+    width: 13px;
+    height: 12px;
+}
+
+.footer-personal-navigation .user-compare::before {
+    background-image: url("../img/compare-gold.svg");
+    width: 10px;
+    height: 10px;
+}
+
+.footer-personal-navigation .user-basket::before {
+    background-image: url("../img/cart-gold.svg");
+    width: 12px;
+    height: 12px;
 }
 
 .footer-personal-navigation a:not(:last-child) {
-    margin-right: 45px;
+    margin-right: 43px;
 }
 
 .footer-address {
