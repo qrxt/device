@@ -651,6 +651,7 @@ a {
 }
 
 .catalog-sort {
+    position: relative;
     display: flex;
 }
 
@@ -680,14 +681,49 @@ a {
     text-transform: uppercase;
 }
 
+.catalog-sort > .sort-item:first-of-type {
+    margin-left: 55px;
+}
+
 .sort-item {
+    padding-top: 3px;
     font-size: 14px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
 }
 
+.sort-item:not(:last-of-type) {
+    margin-right: 31px;
+}
+
 .sort-item-active {
     color: #000000;
+}
+
+.sort-directions {
+    display: flex;
+    align-items: center;
+    margin-left: 250px;
+}
+
+.sort-order {
+    display: block;
+    width: 11px;
+    height: 10px;
+
+    background-repeat: no-repeat;
+}
+
+.sort-order:first-child {
+    margin-right: 20px;
+}
+
+.sort-ascending {
+    background-image: url("../img/icon-up-dir.svg");
+}
+
+.sort-descending {
+    background-image: url("../img/icon-down-dir.svg");
 }
 
 .catalog-wrapper {
