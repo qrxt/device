@@ -58,8 +58,9 @@ a {
 }
 
 .button {
+    position: relative;
     display: inline-block;
-    padding: 0;
+    padding: 0 10px;
 
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
@@ -68,10 +69,30 @@ a {
     letter-spacing: 3.6px;
     text-transform: uppercase;
     color: #000000;
+    text-align: center;
 
     background-color: transparent;
     cursor: pointer;
     border: none;
+    z-index: 0;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    background-color: #f0c52e;
+    height: 8px;
+    width: 100%;
+    transition: 0.2s;
+    z-index: -1;
+}
+
+.button:hover::after,
+.button:focus::after {
+    top: 0;
+    height: 100%;
 }
 
 .input-wrapper {
@@ -537,6 +558,10 @@ a {
     margin-bottom: 65px;
 }
 
+.about-us-button {
+    padding: 0 23px;
+}
+
 .about-partners {
     margin: 0;
     padding: 0;
@@ -592,6 +617,9 @@ a {
     margin-bottom: 60px;
 }
 
+.contacts-button {
+    padding: 0 41px;
+}
 .about-wrapper {
     display: flex;
     justify-content: space-between;
@@ -922,6 +950,10 @@ a {
 
 .filter-bluetooth {
     margin-bottom: 35px;
+}
+
+.filter-form-button {
+    padding: 0 40px;
 }
 
 .catalog {
