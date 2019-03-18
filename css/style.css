@@ -678,7 +678,7 @@ a {
 
 .blocks-captions {
     /* background-color: #ebebeb; */
-    background: linear-gradient(to right, #d9d9d9 20%, #ebebeb 20%);
+    background: linear-gradient(to right, #d9d9d9 30%, #ebebeb 30%);
 }
 
 .blocks-captions > .container {
@@ -764,7 +764,7 @@ a {
 }
 
 .catalog-wrapper {
-    background: linear-gradient(to right, #ebebeb , #ebebeb 20%, #ffffff 20%, #ffffff);
+    background: linear-gradient(to right, #ebebeb , #ebebeb 30%, #ffffff 30%, #ffffff);
 }
 
 .catalog-wrapper > .container {
