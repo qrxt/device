@@ -204,12 +204,12 @@
       <div class="container">
         <div class="services-slider">
           <div class="services-controls">
-            <button class="services-controls-button button">Доставка</button>
+            <button class="services-controls-button services-controls-active button">Доставка</button>
             <button class="services-controls-button button">Гарантия</button>
             <button class="services-controls-button button">Кредит</button>
           </div>
           <ul class="services-list slider">
-            <li class="services-item slider-item">
+            <li class="services-item slider-item delivery-slide">
               <h3 class="services-item-title title">Доставка</h3>
               <p class="services-item-description">
                 Мы с удовольствием доставим ваш товар прямо к вашему
@@ -217,7 +217,7 @@
                 Ведь мы неплохо заработаем, поднимая его на ваш этаж.
               </p>
             </li>
-            <li class="services-item slider-item">
+            <li class="services-item slider-item garanty-slide">
               <h3 class="services-item-title title">Гарантия</h3>
               <p class="services-item-description">
                 Если из-за возгорания купленного у нас товара у вас
@@ -225,7 +225,7 @@
                 Товар, не дом, конечно же.
               </p>
             </li>
-            <li class="services-item slider-item">
+            <li class="services-item slider-item credit-slide">
               <h3 class="services-item-title title">Кредит</h3>
               <p class="services-item-description">
                 Залезть в долговую яму стало проще!
@@ -370,9 +370,11 @@
       </p>
       <p class="input-wrapper">
         <label for="write-us-email">Ваш e-mail:</label>
-        <input class="text-input" type="email" placeholder="email@example.com" name="write-us-email" id="write-us-email">
+        <input class="text-input" type="email" placeholder="email@example.com" name="write-us-email"
+          id="write-us-email">
       </p>
-      <textarea class="text-input" name="write-us-message" id="write-us-message" placeholder="В свободной форме"></textarea>
+      <textarea class="text-input" name="write-us-message" id="write-us-message"
+        placeholder="В свободной форме"></textarea>
       <button class="write-us-button button" type="submit">Отправить</button>
       <button class="write-us-close" aria-label="Закрыть"></button>
     </form>
