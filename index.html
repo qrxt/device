@@ -107,7 +107,7 @@
           <li class="promos-item slider-item" id="slide-2">
             <img class="promo-image" src="img/products-slider-2.png" width="345" height="485" alt="Фитнес-браслет">
             <div class="promo-info">
-              <h3 class="promo-info-title title">Худеем правильно!</h3>
+              <h3 class="promo-info-title title">Худеем<br>правильно!</h3>
               <p class="promo-info-description">
                 Мотивирующие фитнес-браслеты помогут найти в себе силы
                 не пропускать занятия и соблюдать диету.
@@ -218,7 +218,7 @@
                 Ведь мы неплохо заработаем, поднимая его на ваш этаж.
               </p>
             </li>
-            <li class="services-item slider-item garanty-slide">
+            <li class="services-item slider-item warranty-slide">
               <h3 class="services-item-title title">Гарантия</h3>
               <p class="services-item-description">
                 Если из-за возгорания купленного у нас товара у вас
@@ -361,23 +361,30 @@
   <section class="write-us">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <form class="write-us-form" method="post" action="http://echo.htmlacademy.ru">
-      <p class="input-wrapper">
+      <p class="input-wrapper input-wrapper-name">
         <label for="write-us-name">Ваше имя:</label>
         <input class="text-input" type="text" placeholder="Имя Фамилия?" name="write-us-name" id="write-us-name">
       </p>
-      <p class="input-wrapper">
+      <p class="input-wrapper input-wrapper-email">
         <label for="write-us-email">Ваш e-mail:</label>
         <input class="text-input" type="email" placeholder="email@example.com" name="write-us-email"
           id="write-us-email">
       </p>
-      <textarea class="text-input" name="write-us-message" id="write-us-message"
-        placeholder="В свободной форме"></textarea>
+      <p class="input-wrapper input-wrapper-message">
+        <label for="write-us-message">Текст письма:</label>
+        <textarea class="text-input" name="write-us-message" id="write-us-message"
+          placeholder="В свободной форме"></textarea>
+      </p>
       <button class="write-us-button button" type="submit">Отправить</button>
-      <button class="write-us-close" aria-label="Закрыть"></button>
+      <button type="button" class="write-us-close" aria-label="Закрыть"></button>
     </form>
   </section>
   <section class="our-location">
     <h2 class="visually-hidden">Наше местоположение</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.2682299700216!2d37.52774511292481!3d55.68708163382888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1553190908955"
+      allowfullscreen>
+    </iframe>
   </section>
   <script src="js/script.js"></script>
 </body>
