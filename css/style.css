@@ -1898,3 +1898,63 @@ a {
     visibility: visible;
     opacity: 1;
 }
+
+.show-animation {
+    animation: bounce 0.5s;
+}
+
+.error {
+    animation: wobble 0.8s;
+}
+
+@keyframes wobble {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-15px) rotate(-3deg);
+              transform: translateX(-15px) rotate(-3deg);
+    }
+    30% {
+      -webkit-transform: translateX(8px) rotate(3deg);
+              transform: translateX(8px) rotate(3deg);
+    }
+    45% {
+      -webkit-transform: translateX(-8px) rotate(-1deg);
+              transform: translateX(-8px) rotate(-1deg);
+    }
+    60% {
+      -webkit-transform: translateX(3px) rotate(0.5deg);
+              transform: translateX(3px) rotate(0.5deg);
+    }
+    75% {
+      -webkit-transform: translateX(-3px) rotate(0deg);
+              transform: translateX(-3px) rotate(0deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+      -webkit-transform: translateY(-2000px);
+              transform: translateY(-2000px);
+    }
+  
+    70% {
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
+    }
+  
+    90% {
+      -webkit-transform: translateY(-10px);
+              transform: translateY(-10px);
+    }
+  
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+}

@@ -30,6 +30,10 @@ locationViewButton.addEventListener("click", function (clickEvent) {
 	clickEvent.preventDefault();
 	overlay.classList.add("show");
 	locationPopup.classList.add("show");
+	locationPopup.classList.add("show-animation");
+	setTimeout(function () {
+		locationPopup.classList.remove("show-animation");
+	}, 500);
 });
 
 locationViewButton.addEventListener("keydown", function (clickEvent) {
@@ -49,6 +53,10 @@ writeUsViewButton.addEventListener("click", function (clickEvent) {
 	clickEvent.preventDefault();
 	overlay.classList.add("show");
 	writeUsPopup.classList.add("show");
+	writeUsPopup.classList.add("show-animation");
+	setTimeout(function () {
+		writeUsPopup.classList.remove("show-animation");
+	}, 500);
 
 	if (dataFromStorage) {
 		writeUsFormName.value = dataFromStorage.name;
@@ -60,10 +68,10 @@ writeUsViewButton.addEventListener("click", function (clickEvent) {
 writeUsForm.addEventListener("submit", function (submitEvent) {
 	if (!writeUsFormName.value || !writeUsFormEmail.value || !writeUsFormMessage.value) {
 		submitEvent.preventDefault();
-		writeUsPopup.classList.add("modal-error");
+		writeUsPopup.classList.add("error");
 		setTimeout(function () {
-			writeUsPopup.classList.remove("modal-error");
-		}, 600);
+			writeUsPopup.classList.remove("error");
+		}, 800);
 		writeUsFormFields.forEach(function (item) {
 			if (!item.value) {
 				item.classList.add("incorrect");
