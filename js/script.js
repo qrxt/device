@@ -14,71 +14,108 @@ const writeUsFormFields = [writeUsFormName, writeUsFormEmail, writeUsFormMessage
 const locationViewButton = document.querySelector(".contacts-map");
 const locationPopup = document.querySelector(".our-location");
 
+const sliderTabsMenu = document.querySelectorAll(".slider-controls");
+//const servicesSlides = document.querySelector(".services-list li");
+
+const dataFromStorage = (localStorage && localStorage.getItem("userName") && localStorage.getItem("userEmail")) ?
+	{ name: localStorage.getItem("userName"), email: localStorage.getItem("userEmail") }
+	: null;
+
+/* Выпадающая карта */
+
 locationViewButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    overlay.classList.add("show");
-    locationPopup.classList.add("show");
+	event.preventDefault();
+	overlay.classList.add("show");
+	locationPopup.classList.add("show");
 });
 
 locationViewButton.addEventListener("keydown", function (event) {
-    if (event.keyCode === 27) closeLocationPopup();
+	if (event.keyCode === 27) closeLocationPopup();
 });
 
-const dataFromStorage = (localStorage && localStorage.getItem("userName") && localStorage.getItem("userEmail")) ?
-    { name: localStorage.getItem("userName"), email: localStorage.getItem("userEmail") }
-    : null;
-
-const closeWriteUsPopup = function () {
-    overlay.classList.remove("show");
-    writeUsPopup.classList.remove("show");
-}
-
 const closeLocationPopup = function () {
-    overlay.classList.remove("show");
-    locationPopup.classList.remove("show");
+	overlay.classList.remove("show");
+	locationPopup.classList.remove("show");
 }
+
+/* Окончание кода выпадающей карты */
+
+/* Выпадающеее окно обратной связи */
 
 writeUsViewButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    overlay.classList.add("show");
-    writeUsPopup.classList.add("show");
+	event.preventDefault();
+	overlay.classList.add("show");
+	writeUsPopup.classList.add("show");
 
-    if (dataFromStorage) {
-        writeUsFormName.value = dataFromStorage.name;
-        writeUsFormEmail.value = dataFromStorage.email;
-        writeUsFormMessage.focus();
-    } else writeUsFormName.focus();
+	if (dataFromStorage) {
+		writeUsFormName.value = dataFromStorage.name;
+		writeUsFormEmail.value = dataFromStorage.email;
+		writeUsFormMessage.focus();
+	} else writeUsFormName.focus();
 });
 
 writeUsForm.addEventListener("submit", function (event) {
-    if (!writeUsFormName.value || !writeUsFormEmail.value || !writeUsFormMessage.value) {
-        event.preventDefault();
-        writeUsPopup.classList.add("modal-error");
-        setTimeout(function () {
-            writeUsPopup.classList.remove("modal-error");
-        }, 600);
-        writeUsFormFields.forEach(function (item) {
-            if (!item.value) {
-                item.classList.add("incorrect");
-            }
-        })
-    } else if (localStorage) {
-        localStorage.setItem("userName", writeUsFormName.value);
-        localStorage.setItem("userEmail", writeUsFormEmail.value);
-    }
+	if (!writeUsFormName.value || !writeUsFormEmail.value || !writeUsFormMessage.value) {
+		event.preventDefault();
+		writeUsPopup.classList.add("modal-error");
+		setTimeout(function () {
+			writeUsPopup.classList.remove("modal-error");
+		}, 600);
+		writeUsFormFields.forEach(function (item) {
+			if (!item.value) {
+				item.classList.add("incorrect");
+			}
+		})
+	} else if (localStorage) {
+		localStorage.setItem("userName", writeUsFormName.value);
+		localStorage.setItem("userEmail", writeUsFormEmail.value);
+	}
 });
 
 writeUsPopupCloseButton.addEventListener("click", function (event) {
-    event.preventDefault();
+	event.preventDefault();
 
-    closeWriteUsPopup();
+	closeWriteUsPopup();
 });
 
 writeUsPopup.addEventListener("keydown", function (event) {
-    if (event.keyCode === 27) closeWriteUsPopup();
+	if (event.keyCode === 27) closeWriteUsPopup();
 });
 
+const closeWriteUsPopup = function () {
+	overlay.classList.remove("show");
+	writeUsPopup.classList.remove("show");
+}
+
+/* Окончание кода выпадающей формы фидбека */
+
+/* Слайдеры */
+
+sliderTabsMenu.forEach(function (tabsMenuItem) {
+	const sliderTabsMenuControls = tabsMenuItem.querySelectorAll("button");
+	sliderTabsMenuControls.forEach(function (button) {
+		button.addEventListener("click", function (clickEvent) {
+			sliderTabsMenuControls.forEach(function (button, Buttonindex) {
+				button.classList.remove("active");
+				if (clickEvent.target === button) {
+					button.classList.add("active");
+					tabsMenuItem.nextElementSibling
+						.querySelectorAll(".slider-item")
+						.forEach(function (relativeSlide, slideIndex) {
+							relativeSlide.classList.remove("active");
+							if (Buttonindex === slideIndex) {
+								relativeSlide.classList.add("active");
+							}
+						});
+				}
+			});
+		});
+	});
+});
+
+/* Окончание кода слайдеров */
+
 overlay.addEventListener("click", function (event) {
-    closeWriteUsPopup();
-    closeLocationPopup();
+	closeWriteUsPopup();
+	closeLocationPopup();
 });

@@ -71,13 +71,13 @@
     <div class="container">
       <section class="products-slider">
         <h2 class="visually-hidden">Наши новинки</h2>
-        <div class="products-slider-controls">
-          <button class="slide-toggle-button button" aria-label="Третий"></button>
-          <button class="slide-toggle-button button" aria-label="Первый"></button>
-          <button class="slide-toggle-button button" aria-label="Второй"></button>
+        <div class="products-slider-controls slider-controls">
+          <button class="slide-toggle-button active" aria-label="Первый"></button>
+          <button class="slide-toggle-button" aria-label="Второй"></button>
+          <button class="slide-toggle-button" aria-label="Третий"></button>
         </div>
         <ul class="promos-list slider">
-          <li class="promos-item slider-item" id="slide-1">
+          <li class="promos-item active slider-item" id="slide-1">
             <img class="promo-image" src="img/products-slider-1.png" width="384" height="486" alt="Селфи-палка">
             <div class="promo-info">
               <h3 class="promo-info-title title">Делай селфи,<br> как Бен Стиллер!</h3>
@@ -204,13 +204,13 @@
       <h2 class="visually-hidden">Наши сервисы</h2>
       <div class="container">
         <div class="services-slider">
-          <div class="services-controls">
-            <button class="services-controls-button services-controls-active button">Доставка</button>
+          <div class="services-controls slider-controls">
+            <button class="services-controls-button active button">Доставка</button>
             <button class="services-controls-button button">Гарантия</button>
             <button class="services-controls-button button">Кредит</button>
           </div>
           <ul class="services-list slider">
-            <li class="services-item slider-item delivery-slide">
+            <li class="services-item slider-item delivery-slide active">
               <h3 class="services-item-title title">Доставка</h3>
               <p class="services-item-description">
                 Мы с удовольствием доставим ваш товар прямо к вашему
@@ -368,11 +368,13 @@
       </p>
       <p class="input-wrapper input-wrapper-email">
         <label for="write-us-email">Ваш e-mail:</label>
-        <input class="text-input" type="email" placeholder="email@example.com" name="write-us-email" id="write-us-email">
+        <input class="text-input" type="email" placeholder="email@example.com" name="write-us-email"
+          id="write-us-email">
       </p>
       <p class="input-wrapper input-wrapper-message">
         <label for="write-us-message">Текст письма:</label>
-        <textarea class="text-input" name="write-us-message" id="write-us-message" placeholder="В свободной форме"></textarea>
+        <textarea class="text-input" name="write-us-message" id="write-us-message"
+          placeholder="В свободной форме"></textarea>
       </p>
       <button class="write-us-button button" type="submit">Отправить</button>
       <button type="button" class="write-us-close" aria-label="Закрыть"></button>
@@ -380,7 +382,8 @@
   </section>
   <section class="our-location">
     <h2 class="visually-hidden">Наше местоположение</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.2682299700216!2d37.52774511292481!3d55.68708163382888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1553190908955"
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.2682299700216!2d37.52774511292481!3d55.68708163382888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1553190908955"
       allowfullscreen>
     </iframe>
   </section>
