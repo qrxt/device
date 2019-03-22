@@ -18,19 +18,22 @@ const sliderTabsMenu = document.querySelectorAll(".slider-controls");
 //const servicesSlides = document.querySelector(".services-list li");
 
 const dataFromStorage = (localStorage && localStorage.getItem("userName") && localStorage.getItem("userEmail")) ?
-	{ name: localStorage.getItem("userName"), email: localStorage.getItem("userEmail") }
+	{
+		name: localStorage.getItem("userName"),
+		email: localStorage.getItem("userEmail")
+	}
 	: null;
 
 /* Выпадающая карта */
 
-locationViewButton.addEventListener("click", function (event) {
-	event.preventDefault();
+locationViewButton.addEventListener("click", function (clickEvent) {
+	clickEvent.preventDefault();
 	overlay.classList.add("show");
 	locationPopup.classList.add("show");
 });
 
-locationViewButton.addEventListener("keydown", function (event) {
-	if (event.keyCode === 27) closeLocationPopup();
+locationViewButton.addEventListener("keydown", function (clickEvent) {
+	if (clickEvent.keyCode === 27) closeLocationPopup();
 });
 
 const closeLocationPopup = function () {
@@ -42,8 +45,8 @@ const closeLocationPopup = function () {
 
 /* Выпадающеее окно обратной связи */
 
-writeUsViewButton.addEventListener("click", function (event) {
-	event.preventDefault();
+writeUsViewButton.addEventListener("click", function (clickEvent) {
+	clickEvent.preventDefault();
 	overlay.classList.add("show");
 	writeUsPopup.classList.add("show");
 
@@ -54,9 +57,9 @@ writeUsViewButton.addEventListener("click", function (event) {
 	} else writeUsFormName.focus();
 });
 
-writeUsForm.addEventListener("submit", function (event) {
+writeUsForm.addEventListener("submit", function (submitEvent) {
 	if (!writeUsFormName.value || !writeUsFormEmail.value || !writeUsFormMessage.value) {
-		event.preventDefault();
+		submitEvent.preventDefault();
 		writeUsPopup.classList.add("modal-error");
 		setTimeout(function () {
 			writeUsPopup.classList.remove("modal-error");
@@ -72,14 +75,13 @@ writeUsForm.addEventListener("submit", function (event) {
 	}
 });
 
-writeUsPopupCloseButton.addEventListener("click", function (event) {
-	event.preventDefault();
-
+writeUsPopupCloseButton.addEventListener("click", function (clickEvent) {
+	clickEvent.preventDefault();
 	closeWriteUsPopup();
 });
 
-writeUsPopup.addEventListener("keydown", function (event) {
-	if (event.keyCode === 27) closeWriteUsPopup();
+writeUsPopup.addEventListener("keydown", function (keypressEvent) {
+	if (keypressEvent.keyCode === 27) closeWriteUsPopup();
 });
 
 const closeWriteUsPopup = function () {
@@ -115,7 +117,7 @@ sliderTabsMenu.forEach(function (tabsMenuItem) {
 
 /* Окончание кода слайдеров */
 
-overlay.addEventListener("click", function (event) {
+overlay.addEventListener("click", function () {
 	closeWriteUsPopup();
 	closeLocationPopup();
 });

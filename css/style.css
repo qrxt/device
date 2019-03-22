@@ -948,6 +948,12 @@ a {
 .about-partners-item {
     position: relative;
     padding-left: 35px;
+
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 800;
+    color: #000000;
 }
 
 .about-partners-item::before {
@@ -960,14 +966,6 @@ a {
 
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-}
-
-.about-partners-link {
-    font-family: "Gilroy", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 40px;
-    font-weight: 800;
-    color: #000000;
 }
 
 .contacts {
