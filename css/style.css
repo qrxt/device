@@ -144,6 +144,28 @@ a {
     outline: none;
 }
 
+.text-input.incorrect {
+    background-color: #f6dada;
+    border: 1px solid #f6dada;
+    outline: none;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: ease-in 0.2s;
+
+    z-index: 0;
+}
 /* Окончание общих стилей */
 
 .main-header {
@@ -1851,4 +1873,18 @@ a {
     background-image: url("../img/modal-close.svg");
     background-repeat: no-repeat;
     opacity: 0.5;
+}
+
+.write-us-close:hover,
+.write-us-close:focus {
+    opacity: 1;
+}
+
+.write-us-close:active {
+    opacity: 0.2;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
 }
