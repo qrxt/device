@@ -707,7 +707,7 @@ a {
     margin-bottom: 80px;
 }
 
-.categories-item:not(:last-child) {
+.categories-item:not(:nth-child(6n)) {
     margin-right: 40px;
 }
 
@@ -907,7 +907,7 @@ a {
 }
 
 .partners {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
 }
 
 .partners-list {
@@ -928,6 +928,7 @@ a {
     width: 260px;
     height: 100px;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .partners-link:hover,
@@ -1721,13 +1722,15 @@ a {
 
 .footer-navigation {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
     margin: 0;
     padding: 0;
 
     list-style: none;
 }
 
-.footer-navigation-item:not(:last-child) {
+.footer-navigation-item:not(:nth-child(3n)) {
     margin-right: 33px;
 }
 
@@ -1820,6 +1823,8 @@ a {
 
 .social-list {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
     margin: 0 0 0 auto;
     padding: 3px 0 0 25px;
 
