@@ -17,12 +17,11 @@ const locationPopup = document.querySelector(".our-location");
 const sliderTabsMenu = document.querySelectorAll(".slider-controls");
 //const servicesSlides = document.querySelector(".services-list li");
 
-const dataFromStorage = (localStorage && localStorage.getItem("userName") && localStorage.getItem("userEmail")) ?
-	{
-		name: localStorage.getItem("userName"),
-		email: localStorage.getItem("userEmail")
-	}
-	: null;
+const userName = (localStorage && localStorage.getItem("userName")) ?
+	localStorage.getItem("userName") : null;
+
+const userEmail = (localStorage && localStorage.getItem("userEmail")) ?
+	localStorage.getItem("userEmail") : null;
 
 /* Выпадающая карта */
 
@@ -58,9 +57,9 @@ writeUsViewButton.addEventListener("click", function (clickEvent) {
 		writeUsPopup.classList.remove("show-animation");
 	}, 500);
 
-	if (dataFromStorage) {
-		writeUsFormName.value = dataFromStorage.name;
-		writeUsFormEmail.value = dataFromStorage.email;
+	if (userName && userEmail) {
+		writeUsFormName.value = userName;
+		writeUsFormEmail.value = userEmail;
 		writeUsFormMessage.focus();
 	} else writeUsFormName.focus();
 });

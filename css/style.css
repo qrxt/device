@@ -89,6 +89,10 @@ a {
     z-index: -2;
 }
 
+.button:focus {
+    outline: none;
+}
+
 .button:active {
     color: rgba(0, 0, 0, 0.3);
 }
@@ -191,6 +195,7 @@ a {
 .logo:hover,
 .logo:focus {
     opacity: 0.6;
+    outline: none;
 }
 
 .logo:active {
@@ -308,6 +313,7 @@ a {
 .main-search-form:focus-within .search-button {
     visibility: visible;
     opacity: 1;
+    outline: none;
 }
 
 .main-search-form:focus-within .search-input {
@@ -695,6 +701,12 @@ a {
 .categories-card:hover,
 .categories-card:focus {
     background-color: #f0c52e;
+    outline: none;
+}
+
+.categories-link:hover,
+.categories-link:focus {
+    outline: none;
 }
 
 .categories-link:active img {
@@ -840,6 +852,7 @@ a {
     background-color: #000000;
 }
 
+
 .services-controls-button.active::before {
     content: "";
     display: block;
@@ -850,6 +863,11 @@ a {
     left: 0;
     background-color: #000000;
     z-index: -1;
+}
+
+.services-controls-button.active:hover::before,
+.services-controls-button.active:focus::before {
+    outline: 1px solid #4d90fe;
 }
 
 .services-item-title {
@@ -888,6 +906,7 @@ a {
 .partners-link:hover,
 .partners-link:focus {
     background-repeat: no-repeat;
+    outline: none;
 }
 
 .partners-link-dji:hover,
@@ -1077,7 +1096,7 @@ a {
 
 .catalog-filter-caption {
     padding-top: 24px;
-    padding-right: 181px;
+    padding-right: 182px;
     padding-bottom: 23px;
     padding-left: 62px;
 
@@ -1151,6 +1170,7 @@ a {
 .sort-order:hover,
 .sort-order:focus {
     opacity: 0.4;
+    outline: none;
 }
 
 .sort-order:active {
@@ -1536,7 +1556,6 @@ a {
     width: 760px;
     height: 70px;
     top: -22px;
-    height: 70px;
     margin-bottom: 55px;
 
     background-color: #ebebeb;
@@ -1561,6 +1580,7 @@ a {
 .pagination-direction:hover,
 .pagination-direction:focus {
     background-color: #d9d9d9;
+    outline: none;
 }
 
 .pagination-direction:active {
@@ -1570,6 +1590,8 @@ a {
 
 .pagination-numeric {
     display: flex;
+    flex-wrap: wrap;
+    /**/width: 60%;
     margin: 0 auto;
     padding-top: 3px;
     padding-left: 5px;
@@ -1674,6 +1696,7 @@ a {
 }
 
 .footer-personal-navigation {
+    /*width%*/
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -1786,6 +1809,16 @@ a {
     width: 27px;
     height: 35px;
 }
+
+.academy-logo:hover,
+.academy-logo:focus {
+    opacity: 0.6;
+}
+
+.academy-logo:active {
+    opacity: 0.3;
+}
+
 
 .our-location {
     width: 970px;
