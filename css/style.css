@@ -760,8 +760,37 @@ a {
 .categories-card-cameras img {
     position: absolute;
     left: 49px;
-    top: 0;
-    bottom: 0;
+    top: 38px;
+}
+
+.categories-card-fitness {
+    position: relative;
+}
+
+.categories-card-fitness img {
+    position: absolute;
+    left: 28px;
+    top: 50px;
+}
+
+.categories-card-smartwatch {
+    position: relative;
+}
+
+.categories-card-smartwatch img {
+    position: absolute;
+    left: 55px;
+    top: 32px;
+}
+
+.categories-card-quadrocopters {
+    position: relative;
+}
+
+.categories-card-quadrocopters img {
+    position: absolute;
+    left: 13px;
+    top: 49px;
 }
 
 .category-name {
