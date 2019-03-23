@@ -58,6 +58,7 @@ a {
 .button {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     padding: 0 10px;
 
     font-family: "Gilroy", Arial, sans-serif;
@@ -1235,6 +1236,7 @@ a {
 .breadcrumbs li:not(:last-child)::after {
     content: "";
     display: inline-block;
+    vertical-align: middle;
     margin-left: 15px;  
     background-image: url("../img/nav-arrow.svg");
     background-repeat: no-repeat;
@@ -2141,6 +2143,7 @@ a {
 
 .write-us-form .input-wrapper {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .write-us-form label {
