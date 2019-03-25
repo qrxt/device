@@ -105,21 +105,25 @@ const closeWriteUsPopup = function () {
 
 /* Слайдеры */
 
+const changeSlide = function (relativeSlide, slideIndex, buttonIndex) {
+    relativeSlide.classList.remove("active");
+    if (buttonIndex === slideIndex) {
+        relativeSlide.classList.add("active");
+    }
+}
+
 sliderTabsMenu.forEach(function (tabsMenuItem) {
     const sliderTabsMenuControls = tabsMenuItem.querySelectorAll("button");
     sliderTabsMenuControls.forEach(function (button) {
         button.addEventListener("click", function (clickEvent) {
-            sliderTabsMenuControls.forEach(function (button, Buttonindex) {
+            sliderTabsMenuControls.forEach(function (button, buttonIndex) {
                 button.classList.remove("active");
                 if (clickEvent.target === button) {
                     button.classList.add("active");
                     tabsMenuItem.nextElementSibling
                         .querySelectorAll(".slider-item")
                         .forEach(function (relativeSlide, slideIndex) {
-                            relativeSlide.classList.remove("active");
-                            if (Buttonindex === slideIndex) {
-                                relativeSlide.classList.add("active");
-                            }
+                            changeSlide(relativeSlide, slideIndex, buttonIndex)
                         });
                 }
             });
