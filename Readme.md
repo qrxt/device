@@ -1,7 +1,3 @@
----
-permalink: /index.html
----
-
 # Личный проект «Девайс»
 
 * Студент: [Eugene Kalinowski](https://up.htmlacademy.ru/htmlcss/24/user/409751).
