@@ -23,7 +23,7 @@ Gllacy - сайт магазина техники. Проект с курсов 
 ![image](https://user-images.githubusercontent.com/46269438/99878882-83161880-2c19-11eb-9288-5ca8a97046b5.png)
 
 ## Демо
-На Github Pages: [Тык!](https://qrxt.github.io/409751-device-24/index.html)
+На Github Pages: [Тык!](https://qrxt.github.io/device/)
 
 ## Контакты
 - [Telegram](https://telegram.me/qrxt357)
